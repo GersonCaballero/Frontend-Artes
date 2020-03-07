@@ -1,3 +1,126 @@
-<p>
-  companylist works!
-</p>
+<div class="header bg-gradient-danger py-7 py-lg-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <h1>
+        Lista de tipos de usuarios
+      </h1> 
+    </div>
+  </div>  
+</div>
+
+<!-- Page content -->
+<div class="container-fluid mt--7">
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <button type="button" class="btn btn-primary">Nuevo</button>
+        </div>
+        <div class="table-responsive">
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>    
+              <tr>
+                <th scope="row">
+                  <div class="media align-items-center">
+                    <div class="media-body">
+                      <span class="mb-0 text-sm">Administrador</span>
+                    </div>
+                  </div>
+                </th>
+                <td>
+                  Tipo de usuario solo para administradores.
+                </td>
+                <td class="text-right">
+                  <div ngbDropdown   placement="top-right">
+                    <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+                      <a class="dropdown-item" href="javascript:void(0)">Editar</a>
+                      <a class="dropdown-item" href="javascript:void(0)">Eliminar</a>
+                    </div>
+                  </div>
+                </td>
+              </tr> 
+              <tr>
+                <th scope="row">
+                  <div class="media align-items-center">
+                    <div class="media-body">
+                      <span class="mb-0 text-sm">Diseñador</span>
+                    </div>
+                  </div>
+                </th>
+                <td>
+                  Tipo de usuario solo para diseñadores.
+                </td>
+                <td class="text-right">
+                  <div ngbDropdown   placement="top-right">
+                    <a class="btn btn-sm btn-icon-only text-light"  ngbDropdownToggle>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                    <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+                      <a class="dropdown-item" href="javascript:void(0)">Editar</a>
+                      <a class="dropdown-item" href="javascript:void(0)">Eliminar</a>
+                    </div>
+                  </div>
+                </td>
+              </tr> 
+              <tr>
+                <th scope="row">
+                  <div class="media align-items-center">
+                    <div class="media-body">
+                      <span class="mb-0 text-sm">Compañia</span>
+                    </div>
+                  </div>
+                </th>
+                <td>
+                  Tipo de usuario solo para compañias.
+                </td>
+                <td class="text-right">
+                  <div ngbDropdown   placement="top-right">
+                    <a class="btn btn-sm btn-icon-only text-light"  ngbDropdownToggle>
+                      <i class="fas fa-ellipsis-v"></i>
+                    </a>
+                    <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
+                      <a class="dropdown-item" href="javascript:void(0)">Editar</a>
+                      <a class="dropdown-item" href="javascript:void(0)">Eliminar</a>
+                    </div>
+                  </div>
+                </td>
+              </tr>               
+            </tbody>
+          </table>
+        </div>
+        <div class="card-footer py-4">
+          <nav aria-label="...">
+            <ul class="pagination justify-content-end mb-0">
+              <li class="page-item disabled">
+                <a class="page-link" href="javascript:void(0)" tabindex="-1">
+                  <i class="fas fa-angle-left"></i>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="javascript:void(0)">1</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">2 <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">
+                  <i class="fas fa-angle-right"></i>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
