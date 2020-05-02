@@ -20,6 +20,24 @@ import { UsercreateComponent } from './pages/Users/usercreate/usercreate.compone
 import { UsertypelistComponent } from './pages/UserTypes/usertypelist/usertypelist.component';
 import { UsertypeeditComponent } from './pages/UserTypes/usertypeedit/usertypeedit.component';
 import { UsertypecreateComponent } from './pages/UserTypes/usertypecreate/usertypecreate.component';
+import { ColorlistComponent } from './pages/colors/colorlist/colorlist.component';
+import { ColoreditComponent } from './pages/colors/coloredit/coloredit.component';
+import { ColorcreateComponent } from './pages/colors/colorcreate/colorcreate.component';
+import { RulelistComponent } from './pages/rules/rulelist/rulelist.component';
+import { RuleeditComponent } from './pages/rules/ruleedit/ruleedit.component';
+import { RulecreateComponent } from './pages/rules/rulecreate/rulecreate.component';
+import { ValuelogolistComponent } from './pages/valuelogo/valuelogolist/valuelogolist.component';
+import { ValuelogoeditComponent } from './pages/valuelogo/valuelogoedit/valuelogoedit.component';
+import { ValuelogocreateComponent } from './pages/valuelogo/valuelogocreate/valuelogocreate.component';
+import { GarmentcolorlistComponent } from './pages/garmentcolors/garmentcolorlist/garmentcolorlist.component';
+import { GarmentcoloreditComponent } from './pages/garmentcolors/garmentcoloredit/garmentcoloredit.component';
+import { GarmentcolorcreateComponent } from './pages/garmentcolors/garmentcolorcreate/garmentcolorcreate.component';
+import { PetlistComponent } from './pages/pets/petlist/petlist.component';
+import { PeteditComponent } from './pages/pets/petedit/petedit.component';
+import { PetcreateComponent } from './pages/pets/petcreate/petcreate.component';
+import { FontlistComponent } from './pages/fonts/fontlist/fontlist.component';
+import { FonteditComponent } from './pages/fonts/fontedit/fontedit.component';
+import { FontcreateComponent } from './pages/fonts/fontcreate/fontcreate.component';
 
 const routes: Routes =[
   {
@@ -79,7 +97,60 @@ const routes: Routes =[
       {path: 'usertype/edit', component: UsertypeeditComponent},
       // --> create      
       {path: 'usertype/create', component: UsertypecreateComponent},
+      
+      // *****Colors******
+      
+       // --> List      
+       {path: 'color/list', component: ColorlistComponent},
+       // --> edit      
+       {path: 'color/edit', component: ColoreditComponent},
+       // --> create      
+       {path: 'color/create', component: ColorcreateComponent},
 
+       // *****Rules******
+      
+       // --> List      
+       {path: 'rule/list', component: RulelistComponent},
+       // --> edit      
+       {path: 'rule/edit', component: RuleeditComponent},
+       // --> create      
+       {path: 'rule/create', component: RulecreateComponent},
+
+       // *****Values of loges******
+      
+       // --> List      
+       {path: 'valueloge/list', component: ValuelogolistComponent},
+       // --> edit      
+       {path: 'valueloge/edit', component: ValuelogoeditComponent},
+       // --> create      
+       {path: 'valueloge/create', component: ValuelogocreateComponent},
+
+       // *****Garment Colors******
+      
+       // --> List      
+       {path: 'garmentcolor/list', component: GarmentcolorlistComponent},
+       // --> edit      
+       {path: 'garmentcolor/edit', component: GarmentcoloreditComponent},
+       // --> create      
+       {path: 'garmentcolor/create', component: GarmentcolorcreateComponent},
+
+       // *****Pets******
+      
+       // --> List      
+       {path: 'pet/list', component: PetlistComponent},
+       // --> edit      
+       {path: 'pet/edit', component: PeteditComponent},
+       // --> create      
+       {path: 'pet/create', component: PetcreateComponent},
+
+       // *****Fonts******
+      
+       // --> List      
+       {path: 'font/list', component: FontlistComponent},
+       // --> edit      
+       {path: 'font/edit', component: FonteditComponent},
+       // --> create      
+       {path: 'font/create', component: FontcreateComponent},
     ]
   }, {
     path: '',
