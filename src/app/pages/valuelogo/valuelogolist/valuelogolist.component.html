@@ -27,16 +27,16 @@
               </tr>
             </thead>
             <tbody>    
-              <tr>
+              <tr *ngFor="let data of listdata">
                 <th scope="row">
                   <div class="media align-items-center">
                     <div class="media-body">
-                      <span class="mb-0 text-sm">Arizona High School</span>
+                      <span class="mb-0 text-sm">{{ data.Name }}</span>
                     </div>
                   </div>
                 </th>                
                 <td>
-                  Arte para edición.
+                  {{ data.Description }}
                 </td>
                 <td class="text-right">
                   <div ngbDropdown   placement="top-right">

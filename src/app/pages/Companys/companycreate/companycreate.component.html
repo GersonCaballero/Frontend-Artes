@@ -16,6 +16,12 @@
         <div class="card-header border-0">
           <button type="button" class="btn btn-primary" routerLink="/company/list">Regresar</button>
         </div>
+        <div *ngIf="messagefalse" class="alert alert-danger" id="message">
+          <li>{{messagefalse}}</li>
+        </div>
+        <div *ngIf="messagetrue" class="alert alert-success" id="message">
+          <li>{{messagetrue}}</li>
+        </div>
         <div class="table-responsive">
           <hr>
           <div class="container">
@@ -38,32 +44,36 @@
 
             <div class="form-group">
               <label for="">Nombre</label>
-              <input name="nombre" type="Text" class="form-control">
+              <input name="nombre" [(ngModel)]="CompanyName" type="Text" class="form-control">
             </div>
 
             <div class="form-group">
               <label for="">Descripción</label>
-              <input name="descripcion" type="Text" class="form-control">
+              <input name="descripcion" [(ngModel)]="Description" type="Text" class="form-control">
             </div>
             
             <div class="form-group">
-              <label for="">Code</label>
-              <input name="descripcion" type="Text" class="form-control">
+              <label for="">Código</label>
+              <input name="code" [(ngModel)]="Code" type="Text" class="form-control">
             </div>
 
             <div class="form-group">
               <label for="">Dirección</label>
-              <input name="descripcion" type="Text" class="form-control">
+              <input name="Direction" [(ngModel)]="Direction" type="Text" class="form-control">
             </div>
 
             <div class="form-group">
               <label for="">Ciudad</label>
-              <input name="descripcion" type="Text" class="form-control">
+              <input name="City" [(ngModel)]="City" type="Text" class="form-control">
             </div>
 
             <div class="form-group">
               <label for="">Departamento</label>
-              <input name="descripcion" type="Text" class="form-control">
+              <input name="Department" [(ngModel)]="Department" type="Text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <button type="button" class="btn btn-success" (click)="Guardar();">Guardar</button>
             </div>
           </div>
         </div>

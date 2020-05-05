@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CompanyService } from 'src/app/Services/companies/company.service';
+import { Company } from 'src/app/Models/companies/company';
+
 
 @Component({
   selector: 'app-companycreate',
@@ -7,9 +11,56 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompanycreateComponent implements OnInit {
 
-  constructor() { }
+  messagefalse: string;
+  messagetrue: string;
+  CompanyName: string;
+  Code: string;
+  Description: string;
+  Direction: string;
+  City: string;
+  Department: string;
+  ImageURL: string;
+
+  constructor(private service: CompanyService, private router: Router) { 
+    this.service = service;
+    this.router = router;
+  }
 
   ngOnInit() {
+  }
+
+  Guardar(){
+    var company = new Company();
+    company.CompanyName = this.CompanyName
+    company.Code = this.Code
+    company.Description = this.Description
+    company.Direction = this.Direction
+    company.City = this.City
+    company.Department = this.Department
+    company.ImageURL = ""
+    company.State = true
+    company.CreateDate = new Date()
+    company.ModifiedDate = new Date()
+    
+    this.Enviar(company);
+  }
+
+  Enviar(data: Company){
+    debugger
+    this.service.postCompany(data)
+    .subscribe((data: any)=>{
+        debugger
+        this.messagefalse = "";
+        this.messagetrue = data.message;
+        return;
+
+        this.router.navigate(['/company/list']);
+    },
+    (error : any) => {
+      debugger
+      this.messagetrue = "";
+      this.messagefalse = error.status + '-' + error.Message;
+    });
   }
 
   readURL(input) {

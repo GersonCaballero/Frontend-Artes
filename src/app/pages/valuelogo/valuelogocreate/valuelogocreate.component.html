@@ -16,17 +16,27 @@
         <div class="card-header border-0">
           <button type="button" class="btn btn-primary" routerLink="/valueloge/list">Regresar</button>
         </div>
+        <div *ngIf="messagefalse" class="alert alert-danger" id="message">
+          <li>{{messagefalse}}</li>
+        </div>
+        <div *ngIf="messagetrue" class="alert alert-success" id="message">
+          <li>{{messagetrue}}</li>
+        </div>
         <div class="table-responsive">
           <hr>
           <div class="container">
             <div class="form-group">
               <label for="">Nombre</label>
-              <input name="nombre" type="Text" class="form-control">
+              <input name="nombre" [(ngModel)]="Name" type="Text" class="form-control">
             </div>
 
             <div class="form-group">
               <label for="">Descripción</label>
-              <input name="descripcion" type="Text" class="form-control">
+              <input name="descripcion" [(ngModel)]="Description" type="Text" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <button type="button" class="btn btn-success" (click)="Guardar();">Guardar</button>
             </div>
           </div>
         </div>
