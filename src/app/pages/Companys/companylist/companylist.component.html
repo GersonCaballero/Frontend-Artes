@@ -22,23 +22,27 @@
               <tr>
                 <th scope="col">Nombre</th>
                 <th scope="col">Descripción</th>
+                <th scope="col">Código</th>
                 <th scope="col"></th>
               </tr>
             </thead>
             <tbody>    
-              <tr>
+              <tr *ngFor="let data of listdata">
                 <th scope="row">
                   <div class="media align-items-center">
                     <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
                       <img alt="Image placeholder" src="../assets/img/theme/vue.jpg">
                     </a>
                     <div class="media-body">
-                      <span class="mb-0 text-sm">Arizona High School</span>
+                      <span class="mb-0 text-sm">{{ data.CompanyName }}</span>
                     </div>
                   </div>
                 </th>
                 <td>
-                  Compañia de Arizona High School
+                  {{ data.Description }}
+                </td>
+                <td>
+                  {{ data.Code }}
                 </td>
                 <td class="text-right">
                   <div ngbDropdown   placement="top-right">
@@ -51,85 +55,7 @@
                     </div>
                   </div>
                 </td>
-              </tr> 
-              <tr>
-                <th scope="row">
-                  <div class="media align-items-center">
-                    <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
-                      <img alt="Image placeholder" src="../assets/img/theme/vue.jpg">
-                    </a>
-                    <div class="media-body">
-                      <span class="mb-0 text-sm">Texas High School</span>
-                    </div>
-                  </div>
-                </th>
-                <td>
-                  Compañia de Texas High School
-                </td>
-                <td class="text-right">
-                  <div ngbDropdown   placement="top-right">
-                    <a class="btn btn-sm btn-icon-only text-light"  ngbDropdownToggle>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </a>
-                    <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
-                      <a class="dropdown-item" href="javascript:void(0)">Editar</a>
-                      <a class="dropdown-item" href="javascript:void(0)">Eliminar</a>
-                    </div>
-                  </div>
-                </td>
-              </tr> 
-              <tr>
-                <th scope="row">
-                  <div class="media align-items-center">
-                    <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
-                      <img alt="Image placeholder" src="../assets/img/theme/vue.jpg">
-                    </a>
-                    <div class="media-body">
-                      <span class="mb-0 text-sm">Washington High School</span>
-                    </div>
-                  </div>
-                </th>
-                <td>
-                  Compañia de Washington High School
-                </td>
-                <td class="text-right">
-                  <div ngbDropdown   placement="top-right">
-                    <a class="btn btn-sm btn-icon-only text-light"  ngbDropdownToggle>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </a>
-                    <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
-                      <a class="dropdown-item" href="javascript:void(0)">Editar</a>
-                      <a class="dropdown-item" href="javascript:void(0)">Eliminar</a>
-                    </div>
-                  </div>
-                </td>
-              </tr> 
-              <tr>
-                <th scope="row">
-                  <div class="media align-items-center">
-                    <a href="javascript:void(0)" class="avatar rounded-circle mr-3">
-                      <img alt="Image placeholder" src="../assets/img/theme/vue.jpg">
-                    </a>
-                    <div class="media-body">
-                      <span class="mb-0 text-sm">instituto 1 de mayo de 1954</span>
-                    </div>
-                  </div>
-                </th>
-                <td>
-                  Compañia de instituto 1 de mayo de 1954
-                </td>
-                <td class="text-right">
-                  <div ngbDropdown   placement="top-right">
-                    <a class="btn btn-sm btn-icon-only text-light"  ngbDropdownToggle>
-                      <i class="fas fa-ellipsis-v"></i>
-                    </a>
-                    <div ngbDropdownMenu class=" dropdown-menu-right dropdown-menu-arrow">
-                      <a class="dropdown-item" href="javascript:void(0)">Editar</a>
-                      <a class="dropdown-item" href="javascript:void(0)">Eliminar</a>
-                    </div>
-                  </div>
-                </td>
-              </tr>        
+              </tr>
             </tbody>
           </table>
         </div>

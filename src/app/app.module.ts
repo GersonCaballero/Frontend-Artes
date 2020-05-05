@@ -94,7 +94,7 @@ import { ValuelogoeditComponent } from './pages/valuelogo/valuelogoedit/valuelog
     RuleeditComponent,
     ValuelogolistComponent,
     ValuelogocreateComponent,
-    ValuelogoeditComponent
+    ValuelogoeditComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
