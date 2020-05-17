@@ -16,6 +16,12 @@
         <div class="card-header border-0">
           <button type="button" class="btn btn-primary" routerLink="/logoes/list">Regresar</button>
         </div>
+        <div *ngIf="messagefalse" class="alert alert-danger" id="message">
+          <li>{{messagefalse}}</li>
+        </div>
+        <div *ngIf="messagetrue" class="alert alert-success" id="message">
+          <li>{{messagetrue}}</li>
+        </div>
         <div class="table-responsive">
           <hr>
           <div class="container">
@@ -38,27 +44,33 @@
 
             <div class="form-group">
               <label for="">Nombre</label>
-              <input name="nombre" type="Text" class="form-control">
+              <input name="nombre" [(ngModel)]="NameLogo" type="Text" class="form-control">
             </div>
 
             <div class="form-group">
               <label for="">Descripción</label>
-              <input name="nombre" type="Text" class="form-control">
+              <input name="decription" [(ngModel)]="Description" type="Text" class="form-control">
             </div>
 
-            <div class="form-group">
-              <label for="">Compañia</label>
-              <input name="compañia" type="Text" class="form-control">
+            <label for="">Compañia</label>
+            <div class="input-group mb-3">
+              <select class="custom-select" [(ngModel)]="IdCompany" id="Select-Company">
+                <option *ngFor="let company of listcompanies" value={{company.IdCompany}}>{{company.CompanyName}}</option>
+              </select>
             </div>
 
-            <div class="form-group">
-              <label for="">Valor de logo</label>
-              <input name="compañia" type="Text" class="form-control">
+            <label for="">Valor de logo</label>
+            <div class="input-group mb-3">
+              <select class="custom-select" [(ngModel)]="IdValueLogo" id="Select-Valuelogo">
+                <option *ngFor="let valuelogo of listvaluelogos" value={{valuelogo.IdValueLogo}}>{{valuelogo.Name}}</option>
+              </select>
             </div>
 
-            <div class="form-group">
-              <label for="">Colores de prenda</label>
-              <input name="compañia" type="Text" class="form-control">
+            <label for="">Colores de prenda</label>
+            <div class="input-group mb-3">
+              <select class="custom-select" [(ngModel)]="IdGarmentColor" id="Select-GarmentColor">
+                <option *ngFor="let garmentcolor of listgarmentcolor" value={{garmentcolor.IdGarmentColor}}>{{garmentcolor.Name}}</option>
+              </select>
             </div>
 
             <div class="row">
@@ -71,6 +83,10 @@
                   <input type="file" name="file[]" multiple>
                 </form>
               </div>
+            </div>
+
+            <div class="form-group">
+              <button type="button" class="btn btn-success" (click)="Guardar();">Guardar</button>
             </div>
           </div>
         </div>
